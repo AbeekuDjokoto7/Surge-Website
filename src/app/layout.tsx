@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import localFont from "next/font/local"
 import { site, socialProfiles } from "@/lib/site"
 import { jsonLd } from "@/lib/seo"
 import "./globals.css"
@@ -9,19 +8,6 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-})
-
-const polaris = localFont({
-  src: [
-    { path: "./fonts/Polaris-Light.woff2", weight: "300", style: "normal" },
-    { path: "./fonts/Polaris-Book.woff2", weight: "400", style: "normal" },
-    { path: "./fonts/Polaris-Medium.woff2", weight: "500", style: "normal" },
-    { path: "./fonts/Polaris-Bold.woff2", weight: "700", style: "normal" },
-    { path: "./fonts/Polaris-Heavy.woff2", weight: "800", style: "normal" },
-  ],
-  variable: "--font-polaris-face",
-  display: "swap",
-  fallback: ["Inter", "system-ui", "sans-serif"],
 })
 
 export const metadata: Metadata = {
@@ -103,7 +89,7 @@ export const viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${inter.variable} ${polaris.variable}`}>
+    <html lang="en" className={inter.variable}>
       <head>
         {socialProfiles.map((profile) => (
           <link key={profile} rel="me" href={profile} />

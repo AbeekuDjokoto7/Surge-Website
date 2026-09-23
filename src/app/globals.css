@@ -1,9 +1,53 @@
 @import "tailwindcss";
 @import "../styles/board_and_management.css";
 
+@font-face {
+  font-family: "Galaxie Polaris";
+  src: local("Galaxie Polaris Light"), local("GalaxiePolaris-Light"),
+    url("./fonts/Polaris-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Galaxie Polaris";
+  src: local("Galaxie Polaris"), local("Galaxie Polaris Book"),
+    local("GalaxiePolaris-Book"), url("./fonts/Polaris-Book.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Galaxie Polaris";
+  src: local("Galaxie Polaris Medium"), local("GalaxiePolaris-Medium"),
+    url("./fonts/Polaris-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Galaxie Polaris";
+  src: local("Galaxie Polaris Bold"), local("GalaxiePolaris-Bold"),
+    url("./fonts/Polaris-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Galaxie Polaris";
+  src: local("Galaxie Polaris Heavy"), local("GalaxiePolaris-Heavy"),
+    url("./fonts/Polaris-Heavy.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
-  --font-polaris: var(--font-polaris-face), "Polaris Trial", var(--font-inter),
-    "Inter", system-ui, sans-serif;
+  --font-polaris: "Galaxie Polaris", var(--font-inter), "Inter", system-ui, sans-serif;
 
   --text-h1: 36px;
   --text-h1--line-height: 1.28;

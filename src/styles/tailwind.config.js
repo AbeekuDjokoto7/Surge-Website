@@ -104,7 +104,7 @@ module.exports = {
     // define your custom theme here
     extend: {
       fontFamily: {
-        polaris: ["Polaris Trial", "Inter", "system-ui", "sans-serif"],
+        polaris: ["Galaxie Polaris", "Inter", "system-ui", "sans-serif"],
       },
       fontSize: {
         // Typography tokens from Figma
